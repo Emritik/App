@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-4">
+  <form method="post" class="card mx-auto col-6 shadow-lg p-3">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="text" class="form-control" name="title" value="{{datas.title}}" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Details</label>
+        <textarea class="form-control" name="details">{{datas.details}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>
+{% endblock content %}
+
